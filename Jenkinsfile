@@ -32,7 +32,7 @@ pipeline {
                     sshPublisher(
                         publishers: [
                             sshPublisherDesc(
-                                configName: "AhsanInstance", 
+                                configName: "AhsanAliInstance", 
                                 transfers: [sshTransfer(
                                     execCommand: """
                                         docker pull akhano26/distance-converter:${env.BUILD_ID}
@@ -54,7 +54,7 @@ pipeline {
                         sshPublisher(
                             publishers: [
                                 sshPublisherDesc(
-                                    configName: "AhsanInstance",
+                                    configName: "AhsanAliInstance",
                                     transfers: [sshTransfer(
                                         execCommand: """
                                             docker pull akhano26/distance-converter:${previousSuccessfulTag}
